@@ -1,4 +1,4 @@
-# 🛡️ PassGuard: Password Vulnerability & Entropy Analyzer
+# PassGuard: Password Vulnerability & Entropy Analyzer
 
 ## 1. Project Title
 **PassGuard: Cryptographic Entropy & Password Vulnerability Assessment Tool**
@@ -21,24 +21,24 @@ A modular Python utility that evaluates password keyspace mathematically, flags 
 ---
 
 ## 5. Tech Stack
-* **Language:** Python 3.10+
-* **Libraries:** Standard Library (`math`, `re`, `getpass`) — zero third-party dependencies to minimize supply chain attack surface.
+* **Language:** Python
+* **Libraries:** Standard Library (`math`, `re`, `getpass`) - zero third-party dependencies to minimize supply chain attack surface.
 
 ---
 
 ## 6. Implementation Approach
 1. **Shannon Entropy Calculation:** Computes information entropy via $H = L \cdot \log_2(R)$ where $L$ is password length and $R$ is character pool size.
-2. **Predictable Sequence Detection:** Regular expressions identify consecutive identical characters (`(.)\1\1`) and standard keyboard sequences (`123`, `qwerty`, `abc`).
+2. **Predictable Sequence Detection:** Regular expressions identify consecutive identical characters and standard keyboard sequences (`123`, `qwerty`, `abc`).
 3. **Character Pool Diversity:** Audits uppercase, lowercase, numbers, and special symbols.
 4. **Dictionary Lookup:** Performs offline comparisons against common weak password lists.
-5. **Secure Input Handling:** Uses `getpass` to mask terminal input and eliminate shoulder surfing[cite: 1].
+5. **Secure Input Handling:** Uses `getpass` to mask terminal input and eliminate shoulder surfing.
 
 ---
 
 ## 7. Security Considerations
-* **Zero Disk Retention:** Inputs reside strictly in volatile memory and are cleared after analysis[cite: 1].
-* **Input Masking:** Passwords are not echoed to stdout or terminal histories[cite: 1].
-* **Synthetic Data Only:** Built strictly for testing sample/synthetic passwords in compliance with responsible security evaluation guidelines[cite: 1].
+* **Zero Disk Retention:** Inputs reside strictly in volatile memory and are cleared after analysis.
+* **Input Masking:** Passwords are not echoed to stdout or terminal histories.
+* **Synthetic Data Only:** Built strictly for testing sample/synthetic passwords in compliance with responsible security evaluation guidelines.
 
 ---
 
@@ -55,7 +55,7 @@ A modular Python utility that evaluates password keyspace mathematically, flags 
 ---
 
 ## 9. Screenshots / Demo
-*(Terminal execution demo outputs showing multiple test scenarios)*[cite: 1]
+*(Terminal execution demo outputs showing multiple test scenarios)*
 
 ```text
 ==================================================
@@ -79,14 +79,27 @@ Enter sample password to analyze (masked input):
  • Include Uppercase letters, Special characters to broaden keyspace.
 ==================================================
 
----
+```
 
 ## 10. How to Run
  Clone the repository:
-   ```bash
    git clone [https://github.com/LingeshN004/PassGuard.git](https://github.com/LingeshN004/PassGuard.git)
    cd PassGuard
 
 ## 11. Limitations
-1. **Entropy calculations assume uniform character distribution across the keyspace.
-2. **Operates strictly as an offline tool; does not query external third-party breach APIs to avoid data exposure.
+1. Entropy calculations assume uniform character distribution across the keyspace.
+2. Operates strictly as an offline tool; does not query external third-party breach APIs to avoid data exposure.
+
+## 12. Future Improvements
+1. Add a k-Anonymity API integration (e.g., HaveIBeenPwned API) for secure live hash checks.
+
+2. Implement an offline Bloom filter pre-loaded with common compromised password hashes.
+
+3. Build a local GUI interface using Tkinter or Streamlit for non-technical users.
+
+## 13. AI / External Resources Used
+1. NIST SP 800-63B (Digital Identity Guidelines Authentication and Lifecycle Management).
+
+2. Python standard library documentation (math, re, getpass).
+
+3. LLMs(Claude/Gemini) for structuring documentation templates and validating regex patterns.
