@@ -83,6 +83,8 @@ Enter sample password to analyze (masked input):
 
 ## 10. How to Run
  Clone the repository:
+  ## 10. How to Run
+  Clone the repository:
    git clone [https://github.com/LingeshN004/PassGuard.git](https://github.com/LingeshN004/PassGuard.git)
    cd PassGuard
 
