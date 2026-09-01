@@ -78,3 +78,15 @@ Enter sample password to analyze (masked input):
  • Remove predictable sequential patterns.
  • Include Uppercase letters, Special characters to broaden keyspace.
 ==================================================
+
+---
+
+## 10. How to Run
+ Clone the repository:
+   ```bash
+   git clone [https://github.com/LingeshN004/PassGuard.git](https://github.com/LingeshN004/PassGuard.git)
+   cd PassGuard
+
+## 11. Limitations
+1. **Entropy calculations assume uniform character distribution across the keyspace.
+2. **Operates strictly as an offline tool; does not query external third-party breach APIs to avoid data exposure.
