@@ -88,7 +88,7 @@ Enter sample password to analyze (masked input):
 
 ## 11. Limitations
 1. Entropy calculations assume uniform character distribution across the keyspace.
-2. Operates strictly as an offline tool; does not query external third-party breach APIs to avoid data exposure.
+2. Operates strictly as an offline tool, does not query external third-party breach APIs to avoid data exposure.
 
 ## 12. Future Improvements
 1. Add a k-Anonymity API integration (e.g., HaveIBeenPwned API) for secure live hash checks.
